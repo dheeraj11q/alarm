@@ -1,4 +1,5 @@
 import 'package:alarm/bussiness_logic/alarm_cubit/alarm_cubit.dart';
+import 'package:alarm/presentation/add_alarm/add_alarm_widgets/alarm_items.dart';
 import 'package:alarm/presentation/home/home_widgets/alarm_list_item.dart';
 import 'package:alarm/presentation/home/home_widgets/home_app_bar.dart';
 import 'package:alarm/services/alarm_service.dart';
@@ -19,6 +20,7 @@ class Home extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           AlarmService.stopRingtone();
+          appSnack(context, "Alarm Stopped");
         },
         child: const Icon(Icons.stop),
       ),
