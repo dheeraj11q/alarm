@@ -19,8 +19,7 @@ class AlarmService {
 
     // alarm
     AndroidAlarmManager.oneShot(
-        Duration(
-            seconds: (alarmTimeCalculate(alarmModel.dateTime).inSeconds - 60)),
+        Duration(seconds: (alarmTimeCalculate(alarmModel.dateTime).inSeconds)),
         alarmModel.id!,
         playRingtone);
   }
